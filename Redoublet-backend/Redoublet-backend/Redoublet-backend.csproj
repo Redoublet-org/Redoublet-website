@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Redoublet_backend</RootNamespace>
     <UserSecretsId>daff8960-8318-41e3-b877-f2b90948c27a</UserSecretsId>
