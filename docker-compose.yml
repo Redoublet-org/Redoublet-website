@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  backend:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    build:
+      context: ./Redoublet-backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+
+  frontend:
+    build:
+      context: ./Redoublet-website
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
