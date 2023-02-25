@@ -20,7 +20,7 @@ namespace Redoublet_backend.Controllers
         [Route("GetTestJson")]
         public string Get()
         {
-            GameData gameData = new GameData();
+            GameState gameData = new GameState();
 
             Player[] players =
             {
@@ -50,7 +50,7 @@ namespace Redoublet_backend.Controllers
         [Route("Test")]
         public string StartGame(string jsonGameStateString)
         {
-            GameData gameData = HelperFunctions.ParseJson(jsonGameStateString);
+            GameState gameData = HelperFunctions.ParseJson(jsonGameStateString);
 
             return gameData.Dealer.ToString();
         }
@@ -60,15 +60,15 @@ namespace Redoublet_backend.Controllers
     public static class HelperFunctions
     {
         // Method to parse GameData object into json
-        public static GameData ParseJson(string jsonString)
+        public static GameState ParseJson(string jsonString)
         {
-            GameData gameData = JsonSerializer.Deserialize<GameData>(jsonString);
+            GameState gameData = JsonSerializer.Deserialize<GameState>(jsonString);
 
             return gameData;
         }
 
         // Method to parse json object into GameData
-        public static string ParseGameData(GameData gameData)
+        public static string ParseGameData(GameState gameData)
         {
             string json = JsonSerializer.Serialize(gameData);
 

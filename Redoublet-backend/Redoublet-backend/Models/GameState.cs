@@ -2,7 +2,7 @@
 
 namespace Redoublet.Backend.Models
 {
-    public class GameData
+    public class GameState
     {
         public Player[] Players { get; set; }
 
