@@ -5,8 +5,7 @@ export default {
   data() {
     return {
       dateDay: now.getDate(),
-      dateMonth: now.getMonth()+1,
-      greeting: 'hihihaha'
+      dateMonth: now.getMonth()+1
     }
   }
 }
