@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingView from "../views/LandingView.vue";
+import OnlineMultiplayerView from "../views/OnlineMultiplayerView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -31,7 +32,20 @@ const router = createRouter({
     {
       path: "/robot-competition",
       name: "robot competition",
-    }
+    },
+    {
+      path: "/multiplayer-table",
+      name: "multiplayer table",
+      component: OnlineMultiplayerView,
+    },
+    {
+      path: "/multiplayer-tournaments",
+      name: "multiplayer tournaments",
+    },
+    {
+      path: "/multiplayer-competitions",
+      name: "multiplayer competitions",
+    },
   ],
 });
 
