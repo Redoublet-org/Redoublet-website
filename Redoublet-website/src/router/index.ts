@@ -27,10 +27,25 @@ const router = createRouter({
     {
       path: "/robot-random-board",
       name: "robot random board",
+      component: () => import("../views/RobotRandomBoard.vue")
     },
     {
       path: "/robot-competition",
       name: "robot competition",
+      component: () => import("../views/RobotCompetition.vue")
+    },
+    {
+      path: "/competition",
+      name: "competition",
+      component: () => import("../views/PickCompetition.vue")
+    },
+    {
+      path: "/weekly-competition",
+      name: "weekly-competition",
+    },
+    {
+      path: "/daily-competition",
+      name: "daily-competition",
     }
   ],
 });
