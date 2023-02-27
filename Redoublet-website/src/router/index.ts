@@ -10,6 +10,11 @@ const router = createRouter({
       component: LandingView,
     },
     {
+      path: "/menu",
+      name: "menu",
+      component: () => import("../views/PlayerHomeView.vue"),
+    },
+    {
       path: "/login",
       name: "login",
       component: () => import("../views/LoginView.vue"),
@@ -19,6 +24,14 @@ const router = createRouter({
       name: "create account",
       component: () => import("../views/CreateAccountView.vue"),
     },
+    {
+      path: "/robot-random-board",
+      name: "robot random board",
+    },
+    {
+      path: "/robot-competition",
+      name: "robot competition",
+    }
   ],
 });
 
