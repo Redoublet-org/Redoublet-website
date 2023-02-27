@@ -6,6 +6,7 @@
   <div>
     <h1>Play Against a Robot</h1>
     <div>
+      <!--test-->
         <router-link to="/robot-random-board" custom v-slot="{ navigate }">
             <button @click="navigate" role="link">RANDOM BOARD</button>
         </router-link>
