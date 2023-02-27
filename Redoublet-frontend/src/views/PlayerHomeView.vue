@@ -4,6 +4,7 @@ import MultiplayerBox from "../components/MultiplayerBox.vue";
 import AnalysisBox from "../components/AnalysisBox.vue";
 import SettingsBox from "../components/SettingsBox.vue";
 import PlayerRankBox from "../components/PlayerRankBox.vue";
+import TestBoardBox from "../components/TestBoardBox.vue";
 
 </script>
 
@@ -14,5 +15,6 @@ import PlayerRankBox from "../components/PlayerRankBox.vue";
     <PlayRobotBox />
     <MultiplayerBox />
     <AnalysisBox />
+    <TestBoardBox />
   </main>
 </template>

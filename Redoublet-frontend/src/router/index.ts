@@ -31,7 +31,12 @@ const router = createRouter({
     {
       path: "/robot-competition",
       name: "robot competition",
-    }
+    },
+    {
+      path: "/test-board",
+      name: "test board",
+      component: () => import("../views/TestBoardView.vue"),
+    },
   ],
 });
 
