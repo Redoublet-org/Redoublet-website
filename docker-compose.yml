@@ -12,7 +12,7 @@ services:
 
   frontend:
     build:
-      context: ./Redoublet-website
+      context: ./Redoublet-frontend
       dockerfile: Dockerfile
     ports:
       - "8080:80"

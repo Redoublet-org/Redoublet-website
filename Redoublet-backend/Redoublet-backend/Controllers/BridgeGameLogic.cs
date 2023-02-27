@@ -1,12 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Redoublet.Backend.Models;
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using Redoublet.Backend.Services;
 
-namespace Redoublet_backend.Controllers
+
+namespace Redoublet.Backend.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api")]
     public class BridgeGameLogic : ControllerBase
     {
         private readonly ILogger<BridgeGameLogic> _logger;
@@ -16,63 +16,64 @@ namespace Redoublet_backend.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        [Route("GetTestJson")]
-        public string Get()
+        [HttpPost]
+        [Route("StartGame")]
+        public Gamestate StartGame(string Name1, string Name2, string Name3, string Name4)
         {
-            GameData gameData = new GameData();
+            // Initiate the game
+            Gamestate gamestate = new Gamestate();
 
+            // Divide the cards
             Player[] players =
             {
                 new Player()
                 {
-                    Name = "Pitcher",
-                    Cards = new List<Card>()
-                    {
-                        new Card()
-                        {
-                            Value = 3,
-                            Face = Face.Heart,
-                        }
-                    }
-                }
+                    Name = Name1,
+                },
+                new Player()
+                {
+                    Name = Name2,
+                },
+                new Player()
+                {
+                    Name = Name3,
+                },
+                new Player()
+                {
+                    Name = Name4,
+                },
             };
 
-            gameData.Players = players;
-            gameData.Dealer = Side.North;
-            gameData.Round = 3;
-            gameData.Trump = Face.Club;
+            gamestate.Players = players;
 
-            return HelperFunctions.ParseGameData(gameData);
+            gamestate.Dealer = Side.North;
+            gamestate.CurrentPlayer = Side.North;
+            gamestate.Round = 0;
+
+            gamestate = GameService.DealCards(gamestate);
+
+            gamestate.Tricks = new List<Trick>() { new Trick() };
+
+            return gamestate;
         }
 
         [HttpPost]
-        [Route("Test")]
-        public string StartGame(string jsonGameStateString)
+        [Route("PlayCard")]
+        public Gamestate PlayCard(Gamestate gamestate, [FromQuery]Card card)
         {
-            GameData gameData = HelperFunctions.ParseJson(jsonGameStateString);
+            // Get the latest trick
+            Trick currentTrick = gamestate.Tricks.Last();
 
-            return gameData.Dealer.ToString();
-        }
-    }
+            // Add the given card to the trick
+            currentTrick.Cards[(int) gamestate.CurrentPlayer] = card;
 
+            // Decide the next player
+            int currentPlayer = (int) gamestate.CurrentPlayer;
+            int nextPlayer = (currentPlayer + 1) % 4;
 
-    public static class HelperFunctions
-    {
-        // Method to parse GameData object into json
-        public static GameData ParseJson(string jsonString)
-        {
-            GameData gameData = JsonSerializer.Deserialize<GameData>(jsonString);
+            gamestate.CurrentPlayer = (Side)nextPlayer;
 
-            return gameData;
-        }
-
-        // Method to parse json object into GameData
-        public static string ParseGameData(GameData gameData)
-        {
-            string json = JsonSerializer.Serialize(gameData);
-
-            return json;
+            return gamestate;
         }
     }
 }
