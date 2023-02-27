@@ -5,7 +5,6 @@
 
 <template>
     <main>
-    <!-- test -->
     <router-link to="/robot-competition" custom v-slot="{ navigate }">
         <button @click="navigate" role="link">BACK</button>
     </router-link>
