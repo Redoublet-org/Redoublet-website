@@ -27,10 +27,12 @@ const router = createRouter({
     {
       path: "/robot-random-board",
       name: "robot random board",
+      redirect: "/"
     },
     {
       path: "/robot-competition",
       name: "robot competition",
+      redirect: "/",
     },
     {
       path: "/test-board",
