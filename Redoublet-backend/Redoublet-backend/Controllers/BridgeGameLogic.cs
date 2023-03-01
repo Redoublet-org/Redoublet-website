@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Redoublet.Backend.Models;
 using Redoublet.Backend.Services;
 
@@ -16,6 +17,7 @@ namespace Redoublet.Backend.Controllers
             _logger = logger;
         }
 
+        [EnableCors("policy")]
         [HttpPost]
         [Route("StartGame")]
         public Gamestate StartGame(string Name1, string Name2, string Name3, string Name4)
