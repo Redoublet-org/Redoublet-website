@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingView from "../views/LandingView.vue";
-import OnlineMultiplayerView from "../views/OnlineMultiplayerView.vue";
+import MultiplayerTableView from "../views/MultiplayerTableView.vue";
+import MultiplayerTournamentView from "../views/MultiplayerTournamentView.vue";
+import MultiplayerCompetitionView from "../views/MultiplayerCompetitionView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,15 +38,58 @@ const router = createRouter({
     {
       path: "/multiplayer-table",
       name: "multiplayer table",
-      component: OnlineMultiplayerView,
+      component: MultiplayerTableView,
+      children: [
+        {
+          path: "join",
+          name: "join existing table",
+          component: MultiplayerTableView,
+        },
+        {
+          path: "setup",
+          name: "setup table",
+          component: MultiplayerTableView,
+        },
+      ],
     },
     {
       path: "/multiplayer-tournaments",
       name: "multiplayer tournaments",
+      component: MultiplayerTournamentView,
+      children: [
+        {
+          path: "join",
+          name: "join tournament",
+          component: MultiplayerTournamentView,
+        },
+        {
+          path: "setup",
+          name: "setup online tournament",
+          component: MultiplayerTournamentView,
+        },
+        {
+          path: "setup-live",
+          name: "setup live tournament",
+          component: MultiplayerTournamentView,
+        },
+      ],
     },
     {
       path: "/multiplayer-competitions",
       name: "multiplayer competitions",
+      component: MultiplayerCompetitionView,
+      children: [
+        {
+          path: "join",
+          name: "join competition",
+          component: MultiplayerCompetitionView,
+        },
+        {
+          path: "setup",
+          name: "setup competition",
+          component: MultiplayerCompetitionView,
+        },
+      ],
     },
   ],
 });

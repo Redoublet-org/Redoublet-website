@@ -11,7 +11,7 @@
     <router-link to="/multiplayer-tournaments" custom v-slot="{ navigate }">
         <button @click="navigate" role="link">TOURNAMENTS</button>
     </router-link>
-    <router-link to="/multiplayer-competition" custom v-slot="{ navigate }">
+    <router-link to="/multiplayer-competitions" custom v-slot="{ navigate }">
         <button @click="navigate" role="link">COMPETITION</button>
     </router-link>
   </div>
