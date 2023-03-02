@@ -1,8 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingView from "../views/LandingView.vue";
 import MultiplayerTableView from "../views/MultiplayerTableView.vue";
+import MultiplayerTableJoinView from "../views/MultiplayerTableJoinView.vue";
+import MultiplayerTableSetupView from "../views/MultiplayerTableSetupView.vue";
 import MultiplayerTournamentView from "../views/MultiplayerTournamentView.vue";
+import MultiplayerTournamentJoinView from "../views/MultiplayerTournamentJoinView.vue";
+import MultiplayerTournamentSetupView from "../views/MultiplayerTournamentSetupView.vue";
+import MultiplayerTournamentSetupLiveView from "../views/MultiplayerTournamentSetupLiveView.vue";
 import MultiplayerCompetitionView from "../views/MultiplayerCompetitionView.vue";
+import MultiplayerCompetitionJoinView from "../views/MultiplayerCompetitionJoinView.vue";
+import MultiplayerCompetitionSetupView from "../views/MultiplayerCompetitionSetupView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,57 +46,44 @@ const router = createRouter({
       path: "/multiplayer-table",
       name: "multiplayer table",
       component: MultiplayerTableView,
-      children: [
-        {
-          path: "join",
-          name: "join existing table",
-          component: MultiplayerTableView,
-        },
-        {
-          path: "setup",
-          name: "setup table",
-          component: MultiplayerTableView,
-        },
-      ],
+    },
+    {
+      path: "/multiplayer-table/join",
+      component: MultiplayerTableJoinView,
+    },
+    {
+      path: "/multiplayer-table/setup",
+      component: MultiplayerTableSetupView,
     },
     {
       path: "/multiplayer-tournaments",
       name: "multiplayer tournaments",
       component: MultiplayerTournamentView,
-      children: [
-        {
-          path: "join",
-          name: "join tournament",
-          component: MultiplayerTournamentView,
-        },
-        {
-          path: "setup",
-          name: "setup online tournament",
-          component: MultiplayerTournamentView,
-        },
-        {
-          path: "setup-live",
-          name: "setup live tournament",
-          component: MultiplayerTournamentView,
-        },
-      ],
+    },
+    {
+      path: "/multiplayer-tournaments/join",
+      component: MultiplayerTournamentJoinView,
+    },
+    {
+      path: "/multiplayer-tournaments/setup",
+      component: MultiplayerTournamentSetupView,
+    },
+    {
+      path: "/multiplayer-tournaments/setup-live",
+      component: MultiplayerTournamentSetupLiveView,
     },
     {
       path: "/multiplayer-competitions",
       name: "multiplayer competitions",
       component: MultiplayerCompetitionView,
-      children: [
-        {
-          path: "join",
-          name: "join competition",
-          component: MultiplayerCompetitionView,
-        },
-        {
-          path: "setup",
-          name: "setup competition",
-          component: MultiplayerCompetitionView,
-        },
-      ],
+    },
+    {
+      path: "/multiplayer-competitions/join",
+      component: MultiplayerCompetitionJoinView,
+    },
+    {
+      path: "/multiplayer-competitions/setup",
+      component: MultiplayerCompetitionSetupView,
     },
   ],
 });

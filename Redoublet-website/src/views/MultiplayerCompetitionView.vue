@@ -3,6 +3,9 @@
 </script>
 
 <template>
+    <router-link to="/menu" custom v-slot="{ navigate }">
+        <button @click="navigate" role="link">BACK</button>
+    </router-link>
     <div class="row">
         <div class="column">
             <router-link to="/multiplayer-competitions/join" custom v-slot="{ navigate }">
@@ -10,7 +13,7 @@
                 class="btn"
                 @click="navigate"
                 >
-                    join existing
+                join existing
                 </div>
             </router-link>
             <router-link to="/multiplayer-competitions/setup" custom v-slot="{ navigate }">
@@ -18,7 +21,7 @@
                 class="btn"
                 @click="navigate"
                 >
-                    new online
+                new online
                 </div>
             </router-link>
         </div>
@@ -26,11 +29,6 @@
 </template>
 
 <style scoped>
-.btn {
-    background-color: rgb(0, 0, 115);
-    border: 2px solid white;
-    margin: 1rem;
-}
 .column {
     display: flex;
     flex-direction: column;

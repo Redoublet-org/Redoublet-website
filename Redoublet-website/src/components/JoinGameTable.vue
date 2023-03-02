@@ -1,0 +1,80 @@
+<script setup lang="ts">
+</script>
+
+<template>
+    <table>
+      <thead>
+        <tr>
+          <th>Tournament</th>
+          <th>Type</th>
+          <th>Scoring</th>
+          <th>Tables</th>
+          <th>Boards</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[name]</td>
+          <td>Pairs</td>
+          <td>MP(%)</td>
+          <td>8</td>
+          <td>4</td>
+          <td>19/02</td>
+          <td>11:00</td>
+          <div class="btn">join</div>
+        </tr>
+        <tr>
+          <td>[name]</td>
+          <td>Pairs</td>
+          <td>MP(%)</td>
+          <td>8</td>
+          <td>4</td>
+          <td>19/02</td>
+          <td>11:00</td>
+          <div class="btn">join</div>
+        </tr>
+        <tr>
+          <td>[name]</td>
+          <td>Pairs</td>
+          <td>MP(%)</td>
+          <td>8</td>
+          <td>4</td>
+          <td>19/02</td>
+          <td>11:00</td>
+          <div class="btn">join</div>
+        </tr>
+        <tr>
+          <td>[name]</td>
+          <td>Pairs</td>
+          <td>MP(%)</td>
+          <td>8</td>
+          <td>4</td>
+          <td>19/02</td>
+          <td>11:00</td>
+          <div class="btn">join</div>
+        </tr>
+        <tr>
+          <td>[name]</td>
+          <td>Pairs</td>
+          <td>MP(%)</td>
+          <td>8</td>
+          <td>4</td>
+          <td>19/02</td>
+          <td>11:00</td>
+          <div class="btn">join</div>
+        </tr>
+        <tr>
+          <td>[name]</td>
+          <td>Pairs</td>
+          <td>MP(%)</td>
+          <td>8</td>
+          <td>4</td>
+          <td>19/02</td>
+          <td>11:00</td>
+          <div class="btn">join</div>
+        </tr>
+      </tbody>
+    </table>
+  </template>
