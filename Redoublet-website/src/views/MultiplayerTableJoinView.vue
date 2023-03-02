@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import JoinGameGrid from "../components/DefaultGrid.vue";
+import GridButtons from "../components/GridButtons.vue";
 
 const gridColumns = ['Table', 'Players', 'Partner system', 'Avg rating', 'Countdown']
 const gridData = [
@@ -21,4 +22,7 @@ const gridData = [
     <JoinGameGrid 
     :data="gridData"
     :columns="gridColumns"/>
+    <GridButtons
+    :number="gridData.length"
+    :text="'Join'"/>
 </template>
