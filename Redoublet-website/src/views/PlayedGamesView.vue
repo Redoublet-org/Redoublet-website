@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import JoinGameGrid from "../components/DefaultGrid.vue";
+import GridButtons from "../components/GridButtons.vue";
 
 const gridColumns = ['Game', 'Opponent', 'Contract', 'Result', 'SCORING', 'DATE', 'TIME']
 const gridData = [
@@ -21,4 +22,10 @@ const gridData = [
     <JoinGameGrid 
     :data="gridData"
     :columns="gridColumns"/>
+    <GridButtons
+    :number="gridData.length"
+    :text="'Analyse'"/>
+    <GridButtons
+    :number="gridData.length"
+    :text="'Replay'"/>
 </template>
