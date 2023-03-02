@@ -2,7 +2,7 @@
 
 import { ref } from 'vue'
 
-let result = ref<string | null>(null)
+let result = ref< | null>(null)
 let isResultReady = ref(false)
 
 const startGame = async () => {
@@ -28,13 +28,16 @@ const startGame = async () => {
 </script>
 
 <template>
-    <p>yo</p>
     <div>
         <button @click="startGame">Start</button>
     </div>
 
     <div v-if="isResultReady">
-        {{ result }}
+        <div v-for="(players, dealer, round, trump, currentPlayer, tricks) in result">
+            <div v-for="(player in players)"> 
+                <p>{{ player.name }}</p>
+            </div>
+        </div>  
     </div>
 
 </template>
