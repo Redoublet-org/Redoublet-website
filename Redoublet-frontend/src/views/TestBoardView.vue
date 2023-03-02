@@ -3,7 +3,7 @@
 import { ref } from 'vue'
 
 let result = ref<string | null>(null)
-let isResultReady = false
+let isResultReady = ref(false)
 
 const startGame = async () => {
     const response = await fetch('http://localhost:5000/api/StartGame', {
@@ -20,8 +20,8 @@ const startGame = async () => {
     })
 
     const JSONresult = await response.json()
-    result = JSONresult
-    isResultReady = true
+    result.value = JSONresult
+    isResultReady.value = true
 }
 
 
