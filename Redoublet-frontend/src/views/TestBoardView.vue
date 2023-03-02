@@ -1,5 +1,10 @@
 <script setup lang="ts">
 
+import { ref } from 'vue'
+
+let result = ref<string | null>(null)
+let isResultReady = false
+
 const startGame = async () => {
     const response = await fetch('http://localhost:5000/api/StartGame', {
         method: 'POST',
@@ -12,10 +17,11 @@ const startGame = async () => {
             Name3: 'speler 3',
             Name4: 'speler 4',
         })
+    })
 
-    });
-    const result = await response.json();
-    console.log(result)
+    const JSONresult = await response.json()
+    result = JSONresult
+    isResultReady = true
 }
 
 
@@ -26,4 +32,9 @@ const startGame = async () => {
     <div>
         <button @click="startGame">Start</button>
     </div>
+
+    <div v-if="isResultReady">
+        {{ result }}
+    </div>
+
 </template>

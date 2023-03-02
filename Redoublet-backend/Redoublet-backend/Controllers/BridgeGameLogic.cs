@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Cors;
 using Redoublet.Backend.Models;
 using Redoublet.Backend.Services;
 
-
 namespace Redoublet.Backend.Controllers
 {
     [ApiController]
@@ -20,7 +19,7 @@ namespace Redoublet.Backend.Controllers
         [EnableCors("policy")]
         [HttpPost]
         [Route("StartGame")]
-        public Gamestate StartGame(string Name1, string Name2, string Name3, string Name4)
+        public Gamestate StartGame([FromBody] StartGameRequest req)
         {
             // Initiate the game
             Gamestate gamestate = new Gamestate();
@@ -30,19 +29,19 @@ namespace Redoublet.Backend.Controllers
             {
                 new Player()
                 {
-                    Name = Name1,
+                    Name = req.Name1,
                 },
                 new Player()
                 {
-                    Name = Name2,
+                    Name = req.Name2,
                 },
                 new Player()
                 {
-                    Name = Name3,
+                    Name = req.Name3,
                 },
                 new Player()
                 {
-                    Name = Name4,
+                    Name = req.Name4,
                 },
             };
 

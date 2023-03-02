@@ -1,12 +1,16 @@
+var accessPolicy = "policy";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "policy",
+    options.AddPolicy(name: accessPolicy,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:8080");
+                          policy.WithOrigins("http://localhost:8080")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
                       });
 });
 
@@ -26,7 +30,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseCors("policy");
+app.UseCors(accessPolicy);
 
 app.UseAuthorization();
 
