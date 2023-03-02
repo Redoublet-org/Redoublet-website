@@ -23,7 +23,7 @@
           <td>4</td>
           <td>19/02</td>
           <td>11:00</td>
-          <div class="btn">join</div>
+          <button>join</button>
         </tr>
         <tr>
           <td>[name]</td>
@@ -33,7 +33,7 @@
           <td>4</td>
           <td>19/02</td>
           <td>11:00</td>
-          <div class="btn">join</div>
+          <button>join</button>
         </tr>
         <tr>
           <td>[name]</td>
@@ -43,7 +43,7 @@
           <td>4</td>
           <td>19/02</td>
           <td>11:00</td>
-          <div class="btn">join</div>
+          <button>join</button>
         </tr>
         <tr>
           <td>[name]</td>
@@ -53,7 +53,7 @@
           <td>4</td>
           <td>19/02</td>
           <td>11:00</td>
-          <div class="btn">join</div>
+          <button>join</button>
         </tr>
         <tr>
           <td>[name]</td>
@@ -63,7 +63,7 @@
           <td>4</td>
           <td>19/02</td>
           <td>11:00</td>
-          <div class="btn">join</div>
+          <button>join</button>
         </tr>
         <tr>
           <td>[name]</td>
@@ -73,7 +73,7 @@
           <td>4</td>
           <td>19/02</td>
           <td>11:00</td>
-          <div class="btn">join</div>
+          <button>join</button>
         </tr>
       </tbody>
     </table>

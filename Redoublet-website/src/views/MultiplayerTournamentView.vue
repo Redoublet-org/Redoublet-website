@@ -9,28 +9,13 @@
     <div class="row">
         <div class="column">
             <router-link to="/multiplayer-tournaments/join" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                Join existing tournament
-                </div>
+                <button @click="navigate">Join existing tournament</button>
             </router-link>
             <router-link to="/multiplayer-tournaments/setup" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                Setup new online tournament
-                </div>
+                <button @click="navigate">Setup new online tournament</button>
             </router-link>
             <router-link to="/multiplayer-tournaments/setup-live" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                Setup new live tournament
-                </div>
+                <button @click="navigate">Setup new live tournament</button>
             </router-link>
         </div>
     </div>

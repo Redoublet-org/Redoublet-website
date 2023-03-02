@@ -66,5 +66,5 @@ import type { Text } from 'vue';
         <td><input type="checkbox"></td>
       </tr>
     </table>
-    <div class="btn">START COMPETITION</div>
+    <button>START COMPETITION</button>
   </template>

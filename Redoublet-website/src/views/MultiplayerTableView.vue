@@ -9,20 +9,10 @@
     <div class="row">
         <div class="column">
             <router-link to="/multiplayer-table/join" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                Join existing table
-                </div>
+                <button @click="navigate">Join existing table</button>
             </router-link>
             <router-link to="/multiplayer-table/setup" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                Setup new table
-                </div>
+                <button @click="navigate">Setup new table</button>
             </router-link>
         </div>
     </div>

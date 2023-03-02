@@ -9,20 +9,10 @@
     <div class="row">
         <div class="column">
             <router-link to="/multiplayer-competitions/join" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                join existing
-                </div>
+                <button @click="navigate">join existing</button>
             </router-link>
             <router-link to="/multiplayer-competitions/setup" custom v-slot="{ navigate }">
-                <div 
-                class="btn"
-                @click="navigate"
-                >
-                new online
-                </div>
+                <button @click="navigate">new online</button>
             </router-link>
         </div>
     </div>
