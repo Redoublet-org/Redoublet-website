@@ -54,6 +54,14 @@ namespace Redoublet_backend.Controllers
 
             return gameData.Dealer.ToString();
         }
+
+        [HttpPost]
+        [Route("GameState")]
+        public GameState pbnGameState()
+        {
+            PBNParser pbn = new PBNParser();
+            return pbn.importPBN();
+        }
     }
 
 

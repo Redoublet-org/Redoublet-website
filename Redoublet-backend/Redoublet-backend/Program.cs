@@ -11,9 +11,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-PBNParser p = new PBNParser();
-p.IdentifyTest();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
