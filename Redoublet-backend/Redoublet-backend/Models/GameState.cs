@@ -7,15 +7,6 @@ namespace Redoublet.Backend.Models
 {
     public class GameState
     {
-
-        public List<Trick> PlayedTricks = new List<Trick>();
-
-        public List<Auction> EntireAuction = new List<Auction>();
-
-        public Trick[] JSONTricks { get { return PlayedTricks.ToArray(); } }
-
-        public Auction[] JSONAuction { get { return EntireAuction.ToArray(); } }
-
         public Player[] Players { get; set; }
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
@@ -35,6 +26,13 @@ namespace Redoublet.Backend.Models
 
         public int Result { get; set; }
 
+        public List<Auction> EntireAuction = new List<Auction>();
+
+        public List<Trick> PlayedTricks = new List<Trick>();
+
+        public Auction[] JSONAuction { get { return EntireAuction.ToArray(); } }
+
+        public Trick[] JSONTricks { get { return PlayedTricks.ToArray(); } }
     }
 
     public enum Side

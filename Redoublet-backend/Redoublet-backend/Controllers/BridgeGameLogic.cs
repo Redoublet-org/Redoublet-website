@@ -57,7 +57,7 @@ namespace Redoublet_backend.Controllers
 
         [HttpPost]
         [Route("GameState")]
-        public GameState pbnGameState()
+        public List<GameState> pbnGameState()
         {
             PBNParser pbn = new PBNParser();
             return pbn.importPBN();
