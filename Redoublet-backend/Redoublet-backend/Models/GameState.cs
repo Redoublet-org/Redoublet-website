@@ -81,6 +81,15 @@ namespace Redoublet.Backend.Models
 
     public class Contract
     {
+        public Contract(int oddTricks, Face denominator, Risk contractRisk)
+        {
+            OddTricks = oddTricks;
+            Denominator = denominator;
+            ContractRisk = contractRisk;
+        }
+
+        public Contract() { }
+
         public int OddTricks { get; set; }
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
@@ -88,10 +97,25 @@ namespace Redoublet.Backend.Models
 
         [JsonConverter(typeof(JsonStringEnumConverter))]
         public Risk ContractRisk { get; set; }
+
+        public Contract Copy()
+        {
+            return new Contract(this.OddTricks, this.Denominator, this.ContractRisk);
+        }
     }
 
     public class Auction
     {
+        public Auction(Contract north, Contract east, Contract south, Contract west)
+        {
+            North = north;
+            East = east;
+            South = south;
+            West = west;
+        }
+
+        public Auction() { }
+
         public Contract North { get; set; }
 
         public Contract East { get; set; }
@@ -105,16 +129,16 @@ namespace Redoublet.Backend.Models
             switch (side)
             {
                 case "N":
-                    North = new Contract { OddTricks = tricks, Denominator = d, ContractRisk = Risk.Undoubled };
+                    North = new Contract(tricks, d, Risk.Undoubled);
                     break;
                 case "E":
-                    East = new Contract { OddTricks = tricks, Denominator = d, ContractRisk = Risk.Undoubled };
+                    East = new Contract(tricks, d, Risk.Undoubled);
                     break;
                 case "S":
-                    South = new Contract { OddTricks = tricks, Denominator = d, ContractRisk = Risk.Undoubled };
+                    South = new Contract(tricks, d, Risk.Undoubled);
                     break;
                 case "W":
-                    West = new Contract { OddTricks = tricks, Denominator = d, ContractRisk = Risk.Undoubled };
+                    West = new Contract(tricks, d, Risk.Undoubled);
                     break;
                 default: break;
             }
@@ -125,19 +149,19 @@ namespace Redoublet.Backend.Models
             switch (side)
             {
                 case "N":
-                    North = West;
+                    North = West.Copy();
                     North.ContractRisk = d;
                     break;
                 case "E":
-                    East = North;
+                    East = North.Copy();
                     East.ContractRisk = d;
                     break;
                 case "S":
-                    South = East;
+                    South = East.Copy();
                     South.ContractRisk = d;
                     break;
                 case "W":
-                    West = South;
+                    West = South.Copy();
                     West.ContractRisk = d;
                     break;
                 default: break;
@@ -149,19 +173,24 @@ namespace Redoublet.Backend.Models
             switch (side)
             {
                 case "N":
-                    North = new Contract();
+                    North = null;
                     break;
                 case "E":
-                    East = new Contract();
+                    East = null;
                     break;
                 case "S":
-                    South = new Contract();
+                    South = null;
                     break;
                 case "W":
-                    West = new Contract();
+                    West = null;
                     break;
                 default: break;
             }
+        }
+
+        public Auction Copy()
+        {
+            return new Auction(North?.Copy(), East?.Copy(), South?.Copy(), West?.Copy());
         }
     }
 

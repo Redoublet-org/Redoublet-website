@@ -18,6 +18,7 @@ namespace Redoublet.Backend.Models
             string[] pbn = File.ReadAllLines(@"C:\Users\dinab\Desktop\Boeken\Year 3\SP\hi.pbn");
             bool multiLineComment = false;
             bool play = false;
+            int auctionLine = -1;
             gameState = new GameState();
 
             foreach (string s in pbn)
@@ -34,7 +35,6 @@ namespace Redoublet.Backend.Models
                     string turn = "N";
                     foreach(string v in val.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries))
                     {
-                        //Console.WriteLine(v);
                         if (v[0] == '=' || v[0] == '!' || v[0] == '?') continue;
                         if (v[0] == '-' || v[0] == '+')
                         {
@@ -51,20 +51,22 @@ namespace Redoublet.Backend.Models
                 else if (id == "round")
                 {
                     string turn = data["Auction"];
-                    Auction auction = new Auction();
+                    Auction auction;
+                    if (auctionLine >= 0) auction = gameState.EntireAuction[auctionLine].Copy();
+                    else auction = new Auction();
 
                     foreach (string v in val.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries))
                     {
+                        Console.WriteLine(v);
                         if (v[0] == '=' || v[0] == '!' || v[0] == '?') continue;
-                        //Console.WriteLine(v);
                         if (v[0] == 'X') auction.Double(turn, FindRisk(v));
-                        //else if (v[0] == 'P') auction.Pass(turn);
+                        else if (v[0] == 'P') auction.Pass(turn);
                         else auction.BidContract((int)Char.GetNumericValue(v[0]), FindFace(v[1..].ToString()), turn);
-                        Console.WriteLine(v[1..]);
 
                         turn = nextHand(turn);
                     }
                     gameState.EntireAuction.Add(auction);
+                    auctionLine++;
                     continue;
                 }
                 Console.WriteLine(id);
