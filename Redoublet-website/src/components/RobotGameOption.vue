@@ -29,7 +29,3 @@ export default {
     </form>
 </div>
 </template>
-
-<style scoped>
-
-</style>

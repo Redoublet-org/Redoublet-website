@@ -1,6 +1,5 @@
 <script setup lang="ts">
-    import Weekly from "../components/WeeklyCompetition.vue";
-    import Daily from "../components/DailyCompetition.vue";
+    import Weekly from "../components/Competitions.vue";
 </script>
 
 <template>
@@ -9,6 +8,5 @@
         <button @click="navigate" role="link">BACK</button>
     </router-link>
     <Weekly />
-    <Daily />
     </main>
 </template>

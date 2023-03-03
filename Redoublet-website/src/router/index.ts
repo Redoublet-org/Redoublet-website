@@ -38,14 +38,6 @@ const router = createRouter({
       path: "/competition",
       name: "competition",
       component: () => import("../views/PickCompetition.vue")
-    },
-    {
-      path: "/weekly-competition",
-      name: "weekly-competition",
-    },
-    {
-      path: "/daily-competition",
-      name: "daily-competition",
     }
   ],
 });
