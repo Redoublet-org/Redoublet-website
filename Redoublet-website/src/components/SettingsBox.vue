@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <button>
-    SETTINGS(%)
-  </button>
+  <button class="btn">SETTINGS</button>
 </template>
 
 <style scoped>
-
+button {
+  border: 3px solid;
+}
 </style>

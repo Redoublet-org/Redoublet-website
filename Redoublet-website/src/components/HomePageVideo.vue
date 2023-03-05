@@ -8,8 +8,9 @@
 
 <style scoped>
 .video {
-    width: 400px;
-    height: 200px;
-    background-color: red;
+    width: 66%;
+    margin-left: 17%;
+    height: 250px;
+    border: 3px solid;
 }
 </style>
