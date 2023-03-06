@@ -10,6 +10,7 @@ import MultiplayerTournamentSetupLiveView from "../views/MultiplayerTournamentSe
 import MultiplayerCompetitionView from "../views/MultiplayerCompetitionView.vue";
 import MultiplayerCompetitionJoinView from "../views/MultiplayerCompetitionJoinView.vue";
 import MultiplayerCompetitionSetupView from "../views/MultiplayerCompetitionSetupView.vue";
+import PlayedGamesView from "../views/PlayedGamesView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -91,6 +92,10 @@ const router = createRouter({
     {
       path: "/multiplayer-competitions/setup",
       component: MultiplayerCompetitionSetupView,
+    },
+    {
+      path: "/overview",
+      component: PlayedGamesView,
     },
   ],
 });
