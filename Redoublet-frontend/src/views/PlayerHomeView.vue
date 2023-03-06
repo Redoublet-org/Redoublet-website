@@ -10,11 +10,32 @@ import TestBoardBox from "../components/TestBoardBox.vue";
 
 <template>
   <main>
-    <SettingsBox />
-    <PlayerRankBox />
-    <PlayRobotBox />
-    <MultiplayerBox />
-    <AnalysisBox />
-    <TestBoardBox />
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <SettingsBox />
+        </div>
+        <div class="col-2">
+          <PlayerRankBox />
+        </div>
+      </div>
+      <div class="row content">
+        <div class="col-4">
+          <PlayRobotBox />
+        </div>
+        <div class="col-4">
+          <MultiplayerBox />
+        </div>
+        <div class="col-4">
+          <AnalysisBox />
+        </div>
+      </div>
+    </div>
   </main>
 </template>
+
+<style scope>
+.content {
+  margin-top: 100px;
+}
+</style>
