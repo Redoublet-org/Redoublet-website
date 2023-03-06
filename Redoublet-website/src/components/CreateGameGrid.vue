@@ -4,67 +4,101 @@ import type { Text } from 'vue';
 </script>
 
 <template>
-    <table>
+    <table align="center">
       <tr>
-        <td>Competition nr</td>
-        <td><input type="text"></td>
+        <th>Competition nr</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Competition name</td>
-        <td><input type="text"></td>
+        <th>Competition name</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Competition type</td>
-        <td><input type="text"></td>
+        <th>Competition type</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Competition date and time</td>
-        <td><input type="text"></td>
+        <th>Competition date and time</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Competition recurrence</td>
-        <td><input type="text"></td>
+        <th>Competition recurrence</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Number of tables and boards</td>
-        <td><input type="text"></td>
+        <th>Number of tables and boards</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Scoring</td>
-        <td><input type="text"></td>
+        <th>Scoring</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Invite participants</td>
-        <td><input type="text"></td>
+        <th>Invite participants</th>
+        <td><input class="form-control" type="text"></td>
       </tr>
       <tr>
-        <td>Maximum #participants</td>
-        <td><input type="number"></td>
+        <th>Maximum #participants</th>
+        <td><input class="form-control" type="number"></td>
       </tr>
       <tr>
-        <td>Fill empty seats with robots</td>
-        <td><input type="checkbox"></td>
+        <th>Fill empty seats with robots</th>
+        <td><input class="form-check-input" type="checkbox"></td>
       </tr>
       <tr>
-        <td>Time limit</td>
-        <td><input type="number"></td>
+        <th>Time limit</th>
+        <td><input class="form-control" type="number"></td>
       </tr>
       <tr>
-        <td>Audio enabled</td>
-        <td><input type="checkbox"></td>
+        <th>Audio enabled</th>
+        <td><input class="form-check-input" type="checkbox"></td>
       </tr>
       <tr>
-        <td>Video enabled</td>
-        <td><input type="checkbox"></td>
+        <th>Video enabled</th>
+        <td><input class="form-check-input" type="checkbox"></td>
       </tr>
       <tr>
-        <td>Private tournament</td>
-        <td><input type="checkbox"></td>
+        <th>Private tournament</th>
+        <td><input class="form-check-input" type="checkbox"></td>
       </tr>
       <tr>
-        <td>Undo trick (if private = yes)</td>
-        <td><input type="checkbox"></td>
+        <th>Undo trick (if private = yes)</th>
+        <td><input class="form-check-input" type="checkbox"></td>
       </tr>
     </table>
-    <button>START COMPETITION</button>
+    <button class="my-4">START COMPETITION</button>
   </template>
+
+<style scoped>
+
+th {
+  background-color: black;
+  color: white;
+  border: 1px white solid;
+  width: 300px;
+  padding-left: 10px;
+  height: 35px;
+}
+
+td {
+  border: 1px solid;
+}
+
+input {
+  background-color: transparent;
+}
+
+.form-check-input {
+  border: 1px solid;
+  margin-left: 10px;
+}
+
+button {
+  width: 30%;
+  margin-left: 35%;
+  background-color: #00368C;
+  color: white;
+  height: 40px;
+}
+
+</style>

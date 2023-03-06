@@ -1,34 +1,17 @@
 <script setup lang="ts">
-
+    import MultiplayerCompetitionOptions from '@/components/MultiplayerCompetitionOptions.vue';
 </script>
 
 <template>
     <router-link to="/menu" custom v-slot="{ navigate }">
-        <button @click="navigate" role="link">BACK</button>
+        <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <div class="row">
-        <div class="column">
-            <router-link to="/multiplayer-competitions/join" custom v-slot="{ navigate }">
-                <button @click="navigate">join existing</button>
-            </router-link>
-            <router-link to="/multiplayer-competitions/setup" custom v-slot="{ navigate }">
-                <button @click="navigate">new online</button>
-            </router-link>
-        </div>
-    </div>
+    <MultiplayerCompetitionOptions/>
 </template>
 
 <style scoped>
-.column {
-    display: flex;
-    flex-direction: column;
-    align-self:center;
-    justify-self:center;
-}
-
-.row {
-    display: flex;
-    justify-content: space-around;
-    
+.back {
+    border: 3px solid;
+    margin-left: 10px;
 }
 </style>

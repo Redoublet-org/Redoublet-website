@@ -17,12 +17,33 @@ const gridData = [
 
 <template>
     <router-link to="/multiplayer-table" custom v-slot="{ navigate }">
-        <button @click="navigate" role="link">BACK</button>
+        <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <JoinGameGrid 
-    :data="gridData"
-    :columns="gridColumns"/>
-    <GridButtons
-    :number="gridData.length"
-    :text="'Join'"/>
+    <div class="row">
+      <div class="col-8">
+      <JoinGameGrid 
+      :data="gridData"
+      :columns="gridColumns"/>
+    </div>
+    <div class="col-1">
+      <GridButtons
+      :number="gridData.length"
+      :text="'Join'"
+      :color="'blue'"/>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+div {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.back {
+    border: 3px solid;
+    margin-left: 10px;
+}
+</style>
