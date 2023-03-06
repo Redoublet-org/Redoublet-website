@@ -6,7 +6,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <table>
+    <table align="right">
       <thead>
       <tr>
         <th v-for="key in columns">
@@ -27,5 +27,15 @@ const props = defineProps({
 <style scoped>
 table, th, td {
   border: 1px solid;
+  padding: 5px;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+table{
+  margin-top: 100px;
 }
 </style>

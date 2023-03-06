@@ -1,12 +1,19 @@
 <script setup lang="ts">
-    import Weekly from "../components/Competitions.vue";
+    import Competitions from "../components/Competitions.vue";
 </script>
 
 <template>
     <main>
     <router-link to="/robot-competition" custom v-slot="{ navigate }">
-        <button @click="navigate" role="link">BACK</button>
+        <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <Weekly />
+    <Competitions />
     </main>
 </template>
+
+<style scoped>
+.back {
+    border: 3px solid;
+    margin-left: 10px;
+}
+</style>

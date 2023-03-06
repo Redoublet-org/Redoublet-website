@@ -1,37 +1,17 @@
 <script setup lang="ts">
-
+    import MultiplayerTournamentOptions from '@/components/MultiplayerTournamentOptions.vue';
 </script>
 
 <template>
     <router-link to="/menu" custom v-slot="{ navigate }">
-        <button @click="navigate" role="link">BACK</button>
+        <button class="back btn" @click="navigate" role="link">BACK</button>
     </router-link>
-    <div class="row">
-        <div class="column">
-            <router-link to="/multiplayer-tournaments/join" custom v-slot="{ navigate }">
-                <button @click="navigate">Join existing tournament</button>
-            </router-link>
-            <router-link to="/multiplayer-tournaments/setup" custom v-slot="{ navigate }">
-                <button @click="navigate">Setup new online tournament</button>
-            </router-link>
-            <router-link to="/multiplayer-tournaments/setup-live" custom v-slot="{ navigate }">
-                <button @click="navigate">Setup new live tournament</button>
-            </router-link>
-        </div>
-    </div>
+    <MultiplayerTournamentOptions />
 </template>
 
 <style scoped>
-.column {
-    display: flex;
-    flex-direction: column;
-    align-self:center;
-    justify-self:center;
-}
-
-.row {
-    display: flex;
-    justify-content: space-around;
-    
+.back {
+    border: 3px solid;
+    margin-left: 10px;
 }
 </style>
