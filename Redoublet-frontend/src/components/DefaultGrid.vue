@@ -3,6 +3,14 @@ const props = defineProps({
   data: Array,
   columns: Array
 })
+
+interface Row {
+  Table: string,
+  Players: string,
+  PartnerSystem: string,
+  AvgRating: string,
+  Countdown: string,
+}
 </script>
 
 <template>

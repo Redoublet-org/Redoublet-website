@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 var week = new Date()
 var day = week.getDay()
 var conversion = (7-day) * 60 * 60 * 24 * 1000 //find amount of time between today's date and sunday in ms
