@@ -11,6 +11,7 @@ import MultiplayerCompetitionView from "../views/MultiplayerCompetitionView.vue"
 import MultiplayerCompetitionJoinView from "../views/MultiplayerCompetitionJoinView.vue";
 import MultiplayerCompetitionSetupView from "../views/MultiplayerCompetitionSetupView.vue";
 import PlayedGamesView from "../views/PlayedGamesView.vue"
+import GameView from "../views/GameView.vue"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,11 +45,6 @@ const router = createRouter({
       path: "/robot-competition",
       name: "robot competition",
       component: () => import("../views/RobotCompetition.vue")
-    },
-    {
-      path: "/test-board",
-      name: "test board",
-      component: () => import("../views/TestBoardView.vue")
     },
     {
       path: "/competition",
@@ -102,6 +98,10 @@ const router = createRouter({
       path: "/overview",
       component: PlayedGamesView,
     },
+    {
+      path: "/game",
+      component: GameView,
+    }
   ],
 });
 
