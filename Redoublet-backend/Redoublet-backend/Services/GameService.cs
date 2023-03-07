@@ -39,7 +39,7 @@ namespace Redoublet.Backend.Services
 
             foreach (Suit suit in Enum.GetValues(typeof(Suit)))
             {
-                foreach (int value in Enumerable.Range(1, 13))
+                foreach (CardValue value in Enum.GetValues(typeof(CardValue)))
                 {
                     deck.Add(new Card()
                     {
