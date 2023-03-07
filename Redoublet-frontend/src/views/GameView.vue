@@ -29,7 +29,6 @@ interface Trick {
 
 let result = ref<GameResult | null>(null);
 
-
 let isResultReady = ref(false)
 
 const startGame = async () => {
@@ -51,7 +50,6 @@ const startGame = async () => {
     isResultReady.value = true
 }
 
-
 </script>
 
 <template>
@@ -67,38 +65,35 @@ const startGame = async () => {
             </div>
             
             <div v-if="key === 'players'">
-                
+                <div v-for="player in value">
+                    <ul>
+                        <div v-for="(value, key) in player">
+                            <div v-if="key === 'name'">
+                                <h3>
+                                    <b>{{ value }}</b>
+                                </h3>
+                            </div>
 
-                
-                    <div v-for="player in value">
-                        <ul>
-                            <div v-for="(value, key) in player">
-                                <div v-if="key === 'name'">
-                                    <h3>
-                                        <b>{{ value }}</b>
-                                    </h3>
-                                </div>
-
-                                <div v-if="key === 'cards'">
-                                    <div v-for="card in value">
-                                        <li>
-                                            <span v-for="(property, key) in card">
-                                                <span v-if="key === 'suit'">
-                                                    {{ property }}
-                                                </span>
-
-                                                <span v-if="key === 'value'">
-                                                    {{ property }}
-                                                </span>
+                            <div v-if="key === 'cards'">
+                                <div v-for="card in value">
+                                    <li>
+                                        <span v-for="(property, key) in card">
+                                            <span v-if="key === 'suit'">
+                                                {{ property }}
                                             </span>
-                                        </li>
-                                    </div>
+
+                                            <span v-if="key === 'value'">
+                                                {{ property }}
+                                            </span>
+                                        </span>
+                                    </li>
                                 </div>
                             </div>
-                        </ul>
-                        <br>
-                    </div>
-
+                        </div>
+                    </ul>
+                    
+                    <br>
+                </div>
             </div>
         </div>  
     </div>
