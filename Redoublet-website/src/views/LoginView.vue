@@ -16,5 +16,4 @@ import LoginBox from "../components/LoginBox.vue";
     border: 3px solid;
     margin-left: 10px;
 }
-
 </style>

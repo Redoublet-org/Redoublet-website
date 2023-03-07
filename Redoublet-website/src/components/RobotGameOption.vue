@@ -1,50 +1,44 @@
-<script>
-export default {
-  data() {
-  	return {
-	    toggle: false
-  	}
-	}
-}
+<script setup lang="ts">
+import { ref } from 'vue';
+const toggle = ref(false);
 </script>
 
 <template>
-<div class="container mt-5">
-    <div>
-        <router-link to="/game" custom v-slot="{ navigate }">
-            <button class="mb-4" @click="navigate" role="link">PLAY ALONE</button>
-        </router-link>
-    </div>
-    <div>
-        <button @click="toggle = true">INVITE PARTNER</button>
-    </div>
-
-    <div class="search mt-4" v-show="toggle">
-        <h3>Partner search</h3>
-        <form>
-            <input class="form-control" type="name" placeholder="Username">
-            <br>
+    <div class="container mt-5">
+        <div>
             <router-link to="/game" custom v-slot="{ navigate }">
-                <button @click="navigate" role="link">Ask to join</button>
+                <button class="mb-4" @click="navigate" role="link">PLAY ALONE</button>
             </router-link>
-        </form>
+        </div>
+        <div>
+            <button @click="toggle = true">INVITE PARTNER</button>
+        </div>
+
+        <div class="search mt-4" v-show="toggle">
+            <h3>Partner search</h3>
+            <form>
+                <input class="form-control" type="name" placeholder="Username">
+                <br>
+                <router-link to="/game" custom v-slot="{ navigate }">
+                    <button @click="navigate" role="link">Ask to join</button>
+                </router-link>
+            </form>
+        </div>
     </div>
-</div>
 </template>
 
 <style scoped>
-
 .container {
     width: 30%;
     left: 35%;
 }
 
-button{
+button {
     width: 100%;
     background-color: #00368C;
     border: 1px white solid;
     color: white;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -76,5 +70,4 @@ h3 {
     text-align: center;
     font-size: 24px;
 }
-
 </style>

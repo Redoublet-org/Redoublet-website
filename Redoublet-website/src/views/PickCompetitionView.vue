@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import RobotCompetitionOption from "../components/RobotCompetitionOption.vue";
+import Competitions from "../components/Competitions.vue";
 </script>
 
 <template>
     <main>
-        <router-link to="/menu" custom v-slot="{ navigate }">
+        <router-link to="/robot-competition" custom v-slot="{ navigate }">
             <button class="btn back" @click="navigate" role="link">BACK</button>
         </router-link>
-        <RobotCompetitionOption />
+        <Competitions />
     </main>
 </template>
 

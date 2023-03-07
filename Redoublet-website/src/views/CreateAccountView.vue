@@ -15,5 +15,4 @@ import SignupBox from "../components/SingupBox.vue";
     border: 3px solid;
     margin-left: 10px;
 }
-
 </style>

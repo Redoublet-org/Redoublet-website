@@ -3,7 +3,7 @@ const props = defineProps({
   number: Number,
   text: String,
   color: String,
-})
+});
 </script>
 
 <template>
@@ -39,6 +39,7 @@ button {
 .blue {
   background-color: #426C79;
 }
+
 .orange {
   background-color: #B85741;
 }

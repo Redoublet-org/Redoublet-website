@@ -30,6 +30,7 @@ button {
 a {
   color: black;
 }
+
 .container {
   margin-top: 100px;
   width: 50%;
@@ -40,5 +41,4 @@ a {
 .orange {
   color: #f89554;
 }
-
 </style>

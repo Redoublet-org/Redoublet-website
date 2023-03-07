@@ -30,7 +30,7 @@ input {
   border: 3px solid;
 }
 
-a{
+a {
   color: #000;
 }
 

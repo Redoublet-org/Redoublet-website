@@ -1,5 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import LandingView from "../views/LandingView.vue";
+import MenuView from "../views/PlayerHomeView.vue";
+import LoginView from "../views/LoginView.vue";
+import CreateAccountView from "../views/CreateAccountView.vue";
+import RobotRandomBoardView from "../views/RobotRandomBoard.vue";
+import RobotCompetitionView from "../views/RobotCompetition.vue";
+import CompetitionView from "../views/PickCompetitionView.vue";
 import MultiplayerTableView from "../views/MultiplayerTableView.vue";
 import MultiplayerTableJoinView from "../views/MultiplayerTableJoinView.vue";
 import MultiplayerTableSetupView from "../views/MultiplayerTableSetupView.vue";
@@ -23,32 +29,32 @@ const router = createRouter({
     {
       path: "/menu",
       name: "menu",
-      component: () => import("../views/PlayerHomeView.vue"),
+      component: MenuView,
     },
     {
       path: "/login",
       name: "login",
-      component: () => import("../views/LoginView.vue"),
+      component: LoginView,
     },    
     {
       path: "/create-account",
       name: "create account",
-      component: () => import("../views/CreateAccountView.vue"),
+      component: CreateAccountView,
     },
     {
       path: "/robot-random-board",
       name: "robot random board",
-      component: () => import("../views/RobotRandomBoard.vue")
+      component: RobotRandomBoardView,
     },
     {
       path: "/robot-competition",
       name: "robot competition",
-      component: () => import("../views/RobotCompetition.vue")
+      component: RobotCompetitionView,
     },
     {
       path: "/competition",
       name: "competition",
-      component: () => import("../views/PickCompetition.vue")
+      component: CompetitionView,
     },
     {
       path: "/multiplayer-table",

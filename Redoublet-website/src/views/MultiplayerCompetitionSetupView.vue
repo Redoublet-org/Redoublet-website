@@ -3,10 +3,10 @@ import CreateGameGrid from "../components/CreateGameGrid.vue";
 </script>
 
 <template>
-    <router-link to="/multiplayer-table" custom v-slot="{ navigate }">
-        <button class="btn back" @click="navigate" role="link">BACK</button>
-    </router-link>
-    <CreateGameGrid />
+  <router-link to="/multiplayer-table" custom v-slot="{ navigate }">
+    <button class="btn back" @click="navigate" role="link">BACK</button>
+  </router-link>
+  <CreateGameGrid />
 </template>
 
 <style scoped>

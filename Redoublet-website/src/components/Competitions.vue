@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import {ref} from "vue"
-var week = new Date()
-var day = week.getDay()
-var conversion = (7 - day) * 60 * 60 * 24 * 1000 //find amount of time between today's date and sunday in ms
-var time = week.getTime()
-var v = time + conversion
-week.setTime(v)
-var now = new Date()
+import { ref } from "vue";
 
-const weekDate = week.getDate() + '/' + (week.getMonth() + 1) + ' 23:59h'
-const today = now.getDate() + '/' + (now.getMonth() + 1) + ' 23:59h'
+var week = new Date();
+var day = week.getDay();
+var conversion = (7 - day) * 60 * 60 * 24 * 1000; //find amount of time between today's date and sunday in ms
+var time = week.getTime();
+var v = time + conversion;
+week.setTime(v);
+var now = new Date();
+
+const weekDate = ref(week.getDate() + '/' + (week.getMonth() + 1) + ' 23:59h');
+const today = ref(now.getDate() + '/' + (now.getMonth() + 1) + ' 23:59h');
 </script>
 
 <template>

@@ -8,13 +8,13 @@
       <h2>Online Multiplayer</h2>
     </div>
     <router-link to="/multiplayer-table" custom v-slot="{ navigate }">
-        <button class="mb-2" @click="navigate" role="link">TABLE</button>
+      <button class="mb-2" @click="navigate" role="link">TABLE</button>
     </router-link>
     <router-link to="/multiplayer-tournaments" custom v-slot="{ navigate }">
-        <button class="mb-2" @click="navigate" role="link">TOURNAMENTS</button>
+      <button class="mb-2" @click="navigate" role="link">TOURNAMENTS</button>
     </router-link>
     <router-link to="/multiplayer-competitions" custom v-slot="{ navigate }">
-        <button @click="navigate" role="link">COMPETITION</button>
+      <button @click="navigate" role="link">COMPETITION</button>
     </router-link>
   </div>
 </template>
@@ -36,7 +36,7 @@ button {
   font-size: 18px;
 }
 
-.mode{
+.mode {
   background-color: #426C79;
   padding-top: 39px;
   padding-bottom: 39px;

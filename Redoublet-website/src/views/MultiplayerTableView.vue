@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import MultiplayerTableOptions from '@/components/MultiplayerTableOptions.vue';
+import MultiplayerTableOptions from '@/components/MultiplayerTableOptions.vue';
 </script>
 
 <template>

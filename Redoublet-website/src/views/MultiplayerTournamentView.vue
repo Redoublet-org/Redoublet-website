@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import MultiplayerTournamentOptions from '@/components/MultiplayerTournamentOptions.vue';
+import MultiplayerTournamentOptions from '@/components/MultiplayerTournamentOptions.vue';
 </script>
 
 <template>

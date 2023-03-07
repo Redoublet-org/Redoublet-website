@@ -14,7 +14,7 @@ div {
   border-radius: 8px;
 }
 
-p{
+p {
   margin-top: 6px;
   margin-bottom: 6px;
   text-align: center;

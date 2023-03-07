@@ -7,12 +7,12 @@
     <div class="mode mb-4">
       <h2>Play<br>Against Robot</h2>
     </div>
-        <router-link to="/robot-random-board" custom v-slot="{ navigate }">
-            <button class="mb-3" @click="navigate" role="link">RANDOM BOARD</button>
-        </router-link>
-        <router-link to="/robot-competition" custom v-slot="{ navigate }">
-            <button @click="navigate" role="link">COMPETITION</button>
-        </router-link>
+    <router-link to="/robot-random-board" custom v-slot="{ navigate }">
+      <button class="mb-3" @click="navigate" role="link">RANDOM BOARD</button>
+    </router-link>
+    <router-link to="/robot-competition" custom v-slot="{ navigate }">
+      <button @click="navigate" role="link">COMPETITION</button>
+    </router-link>
   </div>
 </template>
 
@@ -33,7 +33,7 @@ button {
   font-size: 18px;
 }
 
-.mode{
+.mode {
   background-color: #000712;
   padding-top: 20px;
   padding-bottom: 20px;
