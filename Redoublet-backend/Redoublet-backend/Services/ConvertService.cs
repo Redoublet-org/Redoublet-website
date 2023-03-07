@@ -5,7 +5,7 @@ namespace Redoublet.Backend.Services
 {
     public class ConvertService
     {
-        // Method to parse Gamestate object into json
+        // Method to parse json object into Gamestate
         public static Gamestate ParseJson(string jsonString)
         {
             Gamestate gameData = JsonSerializer.Deserialize<Gamestate>(jsonString);
@@ -13,7 +13,7 @@ namespace Redoublet.Backend.Services
             return gameData;
         }
 
-        // Method to parse json object into Gamestate
+        // Method to parse Gamestate object into json
         public static string ParseGamestate(Gamestate gameData)
         {
             string json = JsonSerializer.Serialize(gameData);
