@@ -11,7 +11,7 @@ namespace Redoublet.Backend.Controllers
     {
         // Interface that can be used for debugging to console
         private readonly ILogger<BridgeGameLogic> _logger;
-
+        
         public BridgeGameLogic(ILogger<BridgeGameLogic> logger)
         {
             _logger = logger;
