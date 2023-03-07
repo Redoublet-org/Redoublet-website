@@ -29,19 +29,19 @@ namespace Redoublet.Backend.Controllers
             {
                 new Player()
                 {
-                    Name = req.Name1,
+                    Name = req.NameNorth,
                 },
                 new Player()
                 {
-                    Name = req.Name2,
+                    Name = req.NameEast,
                 },
                 new Player()
                 {
-                    Name = req.Name3,
+                    Name = req.NameSouth,
                 },
                 new Player()
                 {
-                    Name = req.Name4,
+                    Name = req.NameWest,
                 },
             };
 

@@ -39,10 +39,10 @@ const startGame = async () => {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            Name1: 'Speler 1',
-            Name2: 'Speler 2',
-            Name3: 'speler 3',
-            Name4: 'speler 4',
+            NameNorth: 'Speler 1',
+            NameEast: 'Speler 2',
+            NameSouth: 'speler 3',
+            NameWest: 'speler 4',
         })
     })
 

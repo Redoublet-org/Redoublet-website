@@ -62,10 +62,9 @@ namespace Redoublet.Backend.Models
 
     public class StartGameRequest
     {
-        public string Name1 {get; set; }
-        public string Name2 {get; set; }
-        public string Name3 {get; set; }
-        public string Name4 {get; set; }
-
+        public string NameNorth {get; set; }
+        public string NameEast {get; set; }
+        public string NameSouth {get; set; }
+        public string NameWest {get; set; }
     }
 }
