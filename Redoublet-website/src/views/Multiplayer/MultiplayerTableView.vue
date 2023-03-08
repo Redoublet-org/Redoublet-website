@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import MultiplayerTournamentOptions from '@/components/MultiplayerTournamentOptions.vue';
+import MultiplayerTableOptions from '../../components/Multiplayer/MultiplayerTableOptions.vue';
 </script>
 
 <template>
     <router-link to="/menu" custom v-slot="{ navigate }">
-        <button class="back btn" @click="navigate" role="link">BACK</button>
+        <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <MultiplayerTournamentOptions />
+    <MultiplayerTableOptions />
 </template>
 
 <style scoped>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import JoinGameGrid from "../components/DefaultGrid.vue";
-import GridButtons from "../components/GridButtons.vue";
+import JoinGameGrid from "../../components/DefaultGrid.vue";
+import GridButtons from "../../components/GridButtons.vue";
 
 const gridColumns = ['Game', 'Opponent', 'Contract', 'Result', 'SCORING', 'DATE', 'TIME'];
 const gridData = [

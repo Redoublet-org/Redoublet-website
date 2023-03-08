@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import CreateGameGrid from "../components/CreateGameGrid.vue";
+import SignupBox from "../../components/Home/SingupBox.vue";
 </script>
 
 <template>
-    <router-link to="/multiplayer-table" custom v-slot="{ navigate }">
+    <router-link to="/" custom v-slot="{ navigate }">
         <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <CreateGameGrid />
+    <h1>Create Account</h1>
+    <SignupBox />
 </template>
 
 <style scoped>

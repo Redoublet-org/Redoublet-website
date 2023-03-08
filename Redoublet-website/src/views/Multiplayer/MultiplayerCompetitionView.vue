@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import LoginBox from "../components/LoginBox.vue";
+import MultiplayerCompetitionOptions from '../../components/Multiplayer/MultiplayerCompetitionOptions.vue';
 </script>
 
 <template>
-    <router-link to="/" custom v-slot="{ navigate }">
+    <router-link to="/menu" custom v-slot="{ navigate }">
         <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <div>
-        <LoginBox />
-    </div>
+    <MultiplayerCompetitionOptions />
 </template>
 
 <style scoped>

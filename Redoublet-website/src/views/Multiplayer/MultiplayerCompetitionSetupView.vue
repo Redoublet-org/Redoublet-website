@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CreateGameGrid from "../components/CreateGameGrid.vue";
+import CreateGameGrid from "../../components/CreateGameGrid.vue";
 </script>
 
 <template>

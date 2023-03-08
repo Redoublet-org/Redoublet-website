@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router';
-import RobotRandomBoardView from "../views/RobotRandomBoard.vue";
-import RobotCompetitionView from "../views/RobotCompetition.vue";
-import CompetitionView from "../views/PickCompetitionView.vue";
+import RobotRandomBoardView from "../views/Robot/RobotRandomBoard.vue";
+import RobotCompetitionView from "../views/Robot/RobotCompetition.vue";
+import CompetitionView from "../views/Robot/PickCompetitionView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
     {

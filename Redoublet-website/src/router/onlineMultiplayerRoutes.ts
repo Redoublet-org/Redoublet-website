@@ -1,14 +1,14 @@
 import type { RouteRecordRaw } from 'vue-router';
-import MultiplayerTableView from "../views/MultiplayerTableView.vue";
-import MultiplayerTableJoinView from "../views/MultiplayerTableJoinView.vue";
-import MultiplayerTableSetupView from "../views/MultiplayerTableSetupView.vue";
-import MultiplayerTournamentView from "../views/MultiplayerTournamentView.vue";
-import MultiplayerTournamentJoinView from "../views/MultiplayerTournamentJoinView.vue";
-import MultiplayerTournamentSetupView from "../views/MultiplayerTournamentSetupView.vue";
-import MultiplayerTournamentSetupLiveView from "../views/MultiplayerTournamentSetupLiveView.vue";
-import MultiplayerCompetitionView from "../views/MultiplayerCompetitionView.vue";
-import MultiplayerCompetitionJoinView from "../views/MultiplayerCompetitionJoinView.vue";
-import MultiplayerCompetitionSetupView from "../views/MultiplayerCompetitionSetupView.vue";
+import MultiplayerTableView from "../views/Multiplayer/MultiplayerTableView.vue";
+import MultiplayerTableJoinView from "../views/Multiplayer/MultiplayerTableJoinView.vue";
+import MultiplayerTableSetupView from "../views/Multiplayer/MultiplayerTableSetupView.vue";
+import MultiplayerTournamentView from "../views/Multiplayer/MultiplayerTournamentView.vue";
+import MultiplayerTournamentJoinView from "../views/Multiplayer/MultiplayerTournamentJoinView.vue";
+import MultiplayerTournamentSetupView from "../views/Multiplayer/MultiplayerTournamentSetupView.vue";
+import MultiplayerTournamentSetupLiveView from "../views/Multiplayer/MultiplayerTournamentSetupLiveView.vue";
+import MultiplayerCompetitionView from "../views/Multiplayer/MultiplayerCompetitionView.vue";
+import MultiplayerCompetitionJoinView from "../views/Multiplayer/MultiplayerCompetitionJoinView.vue";
+import MultiplayerCompetitionSetupView from "../views/Multiplayer/MultiplayerCompetitionSetupView.vue";
 
 export const routes: Array<RouteRecordRaw> = [
     {

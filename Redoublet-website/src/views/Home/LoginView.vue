@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import MultiplayerTableOptions from '@/components/MultiplayerTableOptions.vue';
+import LoginBox from "../../components/Home/LoginBox.vue";
 </script>
 
 <template>
-    <router-link to="/menu" custom v-slot="{ navigate }">
+    <router-link to="/" custom v-slot="{ navigate }">
         <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <MultiplayerTableOptions />
+    <div>
+        <LoginBox />
+    </div>
 </template>
 
 <style scoped>

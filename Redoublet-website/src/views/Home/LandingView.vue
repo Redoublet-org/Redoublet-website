@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HomePageVideo from "../components/HomePageVideo.vue";
+import HomePageVideo from "../../components/Home/HomePageVideo.vue";
 </script>
 
 <template>

@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import MultiplayerCompetitionOptions from '@/components/MultiplayerCompetitionOptions.vue';
+import CreateGameGrid from "../../components/CreateGameGrid.vue";
 </script>
 
 <template>
-    <router-link to="/menu" custom v-slot="{ navigate }">
+    <router-link to="/multiplayer-table" custom v-slot="{ navigate }">
         <button class="btn back" @click="navigate" role="link">BACK</button>
     </router-link>
-    <MultiplayerCompetitionOptions />
+    <CreateGameGrid />
 </template>
 
 <style scoped>

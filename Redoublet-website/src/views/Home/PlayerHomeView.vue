@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import PlayRobotBox from "../components/PlayRobotBox.vue";
-import MultiplayerBox from "../components/MultiplayerBox.vue";
-import AnalysisBox from "../components/AnalysisBox.vue";
-import SettingsBox from "../components/SettingsBox.vue";
-import PlayerRankBox from "../components/PlayerRankBox.vue";
+import PlayRobotBox from "../../components/Home/PlayRobotBox.vue";
+import MultiplayerBox from "../../components/Home/MultiplayerBox.vue";
+import AnalysisBox from "../../components/Home/AnalysisBox.vue";
+import SettingsBox from "../../components/Home/SettingsBox.vue";
+import PlayerRankBox from "../../components/Home/PlayerRankBox.vue";
 
 </script>
 

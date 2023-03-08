@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import type { RouteRecordRaw } from "vue-router";
-import LandingView from "../views/LandingView.vue";
-import MenuView from "../views/PlayerHomeView.vue";
-import LoginView from "../views/LoginView.vue";
-import CreateAccountView from "../views/CreateAccountView.vue";
+import LandingView from "../views/Home/LandingView.vue";
+import MenuView from "../views/Home/PlayerHomeView.vue";
+import LoginView from "../views/Home/LoginView.vue";
+import CreateAccountView from "../views/Home/CreateAccountView.vue";
 
 import {routes as robotRoutes} from "./robotRoutes";
 import {routes as onlineMultiplayerRoutes} from "./onlineMultiplayerRoutes";

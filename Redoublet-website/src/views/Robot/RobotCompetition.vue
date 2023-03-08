@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import RobotCompetitionOption from "../components/RobotCompetitionOption.vue";
+import RobotCompetitionOption from "../../components/Robot/RobotCompetitionOption.vue";
 </script>
 
 <template>
