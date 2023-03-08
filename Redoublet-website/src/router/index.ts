@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
+import type { RouteRecordRaw } from "vue-router";
 import LandingView from "../views/LandingView.vue";
 import MenuView from "../views/PlayerHomeView.vue";
 import LoginView from "../views/LoginView.vue";
 import CreateAccountView from "../views/CreateAccountView.vue";
 
-import * as robotRoutes from "./robotRoutes";
-import * as onlineMultiplayerRoutes from "./onlineMultiplayerRoutes";
-import * as playedGamesRoutes from "./playedGamesRoutes";
+import {routes as robotRoutes} from "./robotRoutes";
+import {routes as onlineMultiplayerRoutes} from "./onlineMultiplayerRoutes";
+import {routes as playedGamesRoutes} from "./playedGamesRoutes";
 
-const homeRoutes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
@@ -31,7 +32,7 @@ const homeRoutes = [
   },
 ]
 
-const allRoutes = homeRoutes.concat(robotRoutes, onlineMultiplayerRoutes, playedGamesRoutes);
+const allRoutes = routes.concat(robotRoutes, onlineMultiplayerRoutes, playedGamesRoutes);
 
 
 const router = createRouter({

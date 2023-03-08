@@ -1,8 +1,9 @@
+import type { RouteRecordRaw } from 'vue-router';
 import RobotRandomBoardView from "../views/RobotRandomBoard.vue";
 import RobotCompetitionView from "../views/RobotCompetition.vue";
 import CompetitionView from "../views/PickCompetitionView.vue";
 
-const robotRoutes = [
+export const routes: Array<RouteRecordRaw> = [
     {
         path: "/robot-random-board",
         name: "robot random board",

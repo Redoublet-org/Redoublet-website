@@ -1,3 +1,4 @@
+import type { RouteRecordRaw } from 'vue-router';
 import MultiplayerTableView from "../views/MultiplayerTableView.vue";
 import MultiplayerTableJoinView from "../views/MultiplayerTableJoinView.vue";
 import MultiplayerTableSetupView from "../views/MultiplayerTableSetupView.vue";
@@ -9,7 +10,7 @@ import MultiplayerCompetitionView from "../views/MultiplayerCompetitionView.vue"
 import MultiplayerCompetitionJoinView from "../views/MultiplayerCompetitionJoinView.vue";
 import MultiplayerCompetitionSetupView from "../views/MultiplayerCompetitionSetupView.vue";
 
-const multiplayerRoutes = [
+export const routes: Array<RouteRecordRaw> = [
     {
         path: "/multiplayer-table",
         name: "multiplayer table",
