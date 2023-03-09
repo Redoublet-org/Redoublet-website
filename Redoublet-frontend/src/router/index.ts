@@ -32,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
     component: CreateAccountView,
   },
   {
-    path: "/game",
+    path: "/test-board",
     component: GameView,
   },
 ]
