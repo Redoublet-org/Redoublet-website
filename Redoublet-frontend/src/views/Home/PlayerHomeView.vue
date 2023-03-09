@@ -1,19 +1,10 @@
 <script setup lang="ts">
-<<<<<<<< HEAD:Redoublet-website/src/views/Home/PlayerHomeView.vue
 import PlayRobotBox from "../../components/Home/PlayRobotBox.vue";
 import MultiplayerBox from "../../components/Home/MultiplayerBox.vue";
 import AnalysisBox from "../../components/Home/AnalysisBox.vue";
 import SettingsBox from "../../components/Home/SettingsBox.vue";
 import PlayerRankBox from "../../components/Home/PlayerRankBox.vue";
-========
-import PlayRobotBox from "../components/PlayRobotBox.vue";
-import MultiplayerBox from "../components/MultiplayerBox.vue";
-import AnalysisBox from "../components/AnalysisBox.vue";
-import SettingsBox from "../components/SettingsBox.vue";
-import PlayerRankBox from "../components/PlayerRankBox.vue";
-import TestBoardBox from "../components/TestBoardBox.vue";
->>>>>>>> add-backend:Redoublet-frontend/src/views/PlayerHomeView.vue
-
+import TestBoardBox from "../../components/Home/TestBoardBox.vue";
 </script>
 
 <template>
@@ -36,6 +27,11 @@ import TestBoardBox from "../components/TestBoardBox.vue";
         </div>
         <div class="col-4">
           <AnalysisBox />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <TestBoardBox />
         </div>
       </div>
     </div>

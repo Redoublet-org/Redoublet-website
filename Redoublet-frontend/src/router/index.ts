@@ -4,6 +4,7 @@ import LandingView from "../views/Home/LandingView.vue";
 import MenuView from "../views/Home/PlayerHomeView.vue";
 import LoginView from "../views/Home/LoginView.vue";
 import CreateAccountView from "../views/Home/CreateAccountView.vue";
+import GameView from "../views/GameView.vue";
 
 import {routes as robotRoutes} from "./robotRoutes";
 import {routes as onlineMultiplayerRoutes} from "./onlineMultiplayerRoutes";
@@ -29,6 +30,10 @@ const routes: Array<RouteRecordRaw> = [
     path: "/create-account",
     name: "create account",
     component: CreateAccountView,
+  },
+  {
+    path: "/game",
+    component: GameView,
   },
 ]
 
