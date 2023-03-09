@@ -11,14 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Models\StartGameRequest.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Models\StartGameRequest.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
