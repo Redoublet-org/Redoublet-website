@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Text } from 'vue';
-
 </script>
 
 <template>

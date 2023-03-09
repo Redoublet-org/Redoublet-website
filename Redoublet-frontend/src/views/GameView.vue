@@ -1,31 +1,10 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-
-interface GameResult {
-  players: Player[];
-  dealer: number;
-  round: number;
-  trump: number;
-  currentPlayer: number;
-  tricks: Trick[];
-}
-
-interface Player {
-  name: string;
-  cards: Card[];
-  vulnerable: boolean;
-}
-
-interface Card {
-  value: number;
-  suit: number;
-}
-
-interface Trick {
-  cards: Card[];
-  winner: number;
-}
+import type { GameResult } from '../interfaces/IGameResult';
+import type { Player } from '../interfaces/IPlayer';
+import type { Card } from '../interfaces/Icard';
+import type { Trick } from '../interfaces/ITrick';
 
 let result = ref<GameResult | null>(null);
 

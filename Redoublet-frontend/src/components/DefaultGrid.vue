@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 const props = defineProps({
   data: Array,
-  columns: Array
-})
+  columns: Array,
+});
 </script>
 
 <template>
