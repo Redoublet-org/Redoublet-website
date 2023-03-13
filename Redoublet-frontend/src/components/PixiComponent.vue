@@ -1,8 +1,3 @@
-<template>
-    <div id="container"></div>
-    
-</template>
-  
 <script setup lang="ts">
 import * as PIXI from "pixi.js";
 import { Application, Sprite } from "pixi.js";
@@ -15,11 +10,9 @@ const app = new Application({
     renderer: "auto"
 });
 
-
-
 onMounted(() => {
-    const myDiv = document.getElementById("container");
-    myDiv.appendChild(app.view);
+    const container = document.getElementById("container");
+    container.appendChild(app.view);
 
     const sprite = PIXI.Sprite.from("src/assets/Logo.png");
     sprite.width = 360;
@@ -29,14 +22,15 @@ onMounted(() => {
     app.stage.addChild(sprite);
 });
 </script>
+
+<template>
+    <div id="container"></div>
+</template>
   
 <style scoped>
 div {
-    width: 640px;
-    height: 480px;
+    width: 60%;
     margin-left: 20%;
-    position: relative;
-    z-index: 1;
 }
 </style>
   
