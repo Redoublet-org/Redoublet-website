@@ -2,7 +2,7 @@
 
 namespace Redoublet.Backend.Services
 {
-    public class GameService
+    public class DistributeCardsService
     {
         // Method to randomly deal 13 cards to each player in the game
         public static Gamestate DealCards(Gamestate gamestate)

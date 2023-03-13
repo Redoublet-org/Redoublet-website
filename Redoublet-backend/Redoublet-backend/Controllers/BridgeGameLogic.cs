@@ -23,45 +23,43 @@ namespace Redoublet.Backend.Controllers
         public Gamestate StartGame([FromBody] StartGameRequest req)
         {
             // Initiate the game
-            Gamestate gamestate = new Gamestate();
-
-            // Divide the cards
-            Player[] players =
+            Gamestate gamestate = new Gamestate()
             {
-                new Player()
+                Players = new Player[]
                 {
-                    Name = req.NameNorth,
+                    new Player()
+                    {
+                        Name = req.NameNorth,
+                    },
+                    new Player()
+                    {
+                        Name = req.NameEast,
+                    },
+                    new Player()
+                    {
+                        Name = req.NameSouth,
+                    },
+                    new Player()
+                    {
+                        Name = req.NameWest,
+                    },
                 },
-                new Player()
-                {
-                    Name = req.NameEast,
-                },
-                new Player()
-                {
-                    Name = req.NameSouth,
-                },
-                new Player()
-                {
-                    Name = req.NameWest,
-                },
+                Dealer = Side.North,
+                CurrentPlayer = Side.North,
+                Round = 0,
+                Tricks = new List<Trick>(),
+                BidHistory = new List<Bid>(),
+                CurrentPhase = Gamestate.Phase.Bidding,
             };
 
-            gamestate.Players = players;
-
-            gamestate.Dealer = Side.North;
-            gamestate.CurrentPlayer = Side.North;
-            gamestate.Round = 0;
-
-            gamestate = GameService.DealCards(gamestate);
-
-            gamestate.Tricks = new List<Trick>() { new Trick() };
+            gamestate = DistributeCardsService.DealCards(gamestate);
 
             return gamestate;
         }
 
         [HttpPost]
         [Route("PlayCard")]
-        public Gamestate PlayCard(Gamestate gamestate, [FromQuery]Card card)
+        public Gamestate PlayCard(Gamestate gamestate, [FromQuery] Card card)
         {
             // Get the latest trick
             Trick currentTrick = gamestate.Tricks.Last();
@@ -69,13 +67,33 @@ namespace Redoublet.Backend.Controllers
             // Add the given card to the trick
             currentTrick.Cards[(int) gamestate.CurrentPlayer] = card;
 
-            // Decide the next player
-            int currentPlayer = (int) gamestate.CurrentPlayer;
-            int nextPlayer = (currentPlayer + 1) % 4;
+            return gamestate;
+        }
 
-            gamestate.CurrentPlayer = (Side)nextPlayer;
+        [EnableCors("policy")]
+        [HttpPost]
+        [Route("Bid")]
+        public Gamestate Bid([FromBody] BidRequest req)
+        {
+            Gamestate gamestate;
+
+            if (req.Bid.Suit == BiddingSuit.Pass)
+            {
+                gamestate = BiddingService.Pass(req.Gamestate);
+            }
+            else
+            {
+                gamestate = BiddingService.Bid(req.Gamestate, req.Bid);
+            }
 
             return gamestate;
+        }
+
+        [HttpPost]
+        [Route("GetHighestBid")]
+        public Bid GetHighestBid(Gamestate gamestate)
+        {
+            return gamestate.HighestBid;
         }
     }
 }

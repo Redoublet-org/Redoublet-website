@@ -2,8 +2,8 @@
 {
     public class Trick
     {
-        public Card[] Cards { get; set; }
+        public List<Card> Cards { get; set; }
 
-        public Side Winner { get; set; }
+        public Side? Winner { get; set; }
     }
 }
