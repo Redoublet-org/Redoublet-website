@@ -1,6 +1,7 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
+import PixiComponent from '../components/PixiComponent.vue';
 
 interface GameResult {
   players: Player[];
@@ -53,6 +54,7 @@ const startGame = async () => {
 </script>
 
 <template>
+    <PixiComponent />
     <div>
         <button @click="startGame">Shuffle cards</button>
     </div>
