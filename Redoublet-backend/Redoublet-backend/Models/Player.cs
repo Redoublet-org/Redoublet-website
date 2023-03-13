@@ -8,4 +8,12 @@
 
         public bool Vulnerable { get; set; }
     }
+
+    public enum Side
+    {
+        North,
+        East,
+        South,
+        West,
+    }
 }

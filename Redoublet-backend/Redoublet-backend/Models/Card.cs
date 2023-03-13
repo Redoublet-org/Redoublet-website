@@ -12,10 +12,10 @@ namespace Redoublet.Backend.Models
 
     public enum Suit
     {
+        Club,
         Diamond,
         Heart,
         Spade,
-        Club,
     }
 
     public enum CardValue
