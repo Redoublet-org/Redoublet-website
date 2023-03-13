@@ -8,10 +8,8 @@ namespace Redoublet.Backend.Services
         public static Gamestate Bid(Gamestate gamestate, Bid bid)
         {
             // Verify that bid is valid
-            if (bid.Amount <= 0 && bid.Amount > 7)
+            if (bid.Amount <= 0 || bid.Amount > 7)
             {
-                Console.WriteLine("Invalid bid, returning original gamestate");
-
                 return gamestate;
             }
 
@@ -42,7 +40,8 @@ namespace Redoublet.Backend.Services
 
             bool biddingFinished = gamestate.BidHistory
                 .TakeLast(3)
-                .All(bid => (int)bid.Suit == -1);
+                .All(bid => (int)bid.Suit == -1) 
+                && gamestate.BidHistory.Count >= 3;
 
             if (biddingFinished)
             {
